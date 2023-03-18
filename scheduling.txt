@@ -1,0 +1,10 @@
+Root's crontab settings can be changed by using the 'sudo crontab -e' command
+
+This will use escalated credentials without having to store an admin password in some script, meeting the requirement to update the /usr/bin/terraform file
+
+The following line is added to the crontab file: 
+	0 21 * * 0 ~/Scripts/updateterra.sh
+
+2100 sunday UTC would be 0900 NZST
+
+As long as the server is up cron should run the terraform update script at the scheduled time at 0900 NZST Monday every week.
